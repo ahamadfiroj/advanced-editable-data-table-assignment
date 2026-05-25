@@ -1,6 +1,6 @@
 import { memo, useMemo } from 'react'
 import { List } from 'react-window'
-import { useTableContext } from '../context/TableContext.jsx'
+import { useTableContext } from '../../context/TableContext.jsx'
 import {
   ActionButton,
   ActionButtons,

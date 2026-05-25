@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react'
 import { COLUMNS } from './constants/columns.js'
-import TableToolbar from './components/TableToolbar.jsx'
-import VirtualizedEditableTable from './components/VirtualizedEditableTable.jsx'
+import VirtualizedEditableTable from './components/VirtualizedEditableTable'
 import { useTableContext } from './context/TableContext.jsx'
 import { useBeforeUnloadPrompt } from './hooks/useBeforeUnloadPrompt.js'
 import { GlobalStyle } from './styles/GlobalStyle.js'
 import { AppHeader, AppShell } from './styles/App.styles.js'
+import TableSearchFilter from './components/TableSearchFilter'
 
 const PAGE_SIZE_OPTIONS = [25, 50, 100]
 
@@ -140,7 +140,7 @@ function App() {
         </p>
         </AppHeader>
 
-        <TableToolbar
+        <TableSearchFilter
           mode={mode}
           onModeChange={setMode}
           pageSize={pageSize}
